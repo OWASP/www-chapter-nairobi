@@ -22,7 +22,7 @@ region: This is the region you are in according to our data
 </div>
 
 ## Welcome
-Include some information here about your chapter
+This is OWASP Nairobi Home page. We are hoping to create a vibrant community
 
 ## Participation
 The Open Web Application Security Project (OWASP) is a nonprofit foundation that works to improve the security of software. All of our projects ,tools, documents, forums, and chapters are free and open to anyone interested in improving application security. 
