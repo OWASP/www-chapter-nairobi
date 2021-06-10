@@ -3,8 +3,7 @@
 layout: col-sidebar
 title: OWASP Nairobi
 tags: example-tag
-meetup group:
-owasp-nairobi-meetup-group
+meetup group:owasp-nairobi-meetup-group
 region: Africa
 
 ---
