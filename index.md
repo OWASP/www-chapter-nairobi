@@ -17,7 +17,7 @@ Welcome to the new OWASP Nairobi Chapter. More information is coming up in the n
 ## Welcome
 This is OWASP Nairobi Home page. We are hoping to create a vibrant community.
 
-## Upcomeing Meeting:
+## Upcoming Meeting:
 
 {% include chapter_events.html group=page.meetup-group %}
 
