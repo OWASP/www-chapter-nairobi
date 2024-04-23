@@ -1,6 +1,5 @@
 ### Leaders
 
-* [Jimmy Gathage](mailto:jimmy.gathage@owasp.org)
-* [Joseph Mwangi](mailto:joseph.mwangi@owasp.org)
-* [Clifford Ogeto](mailto:clifford.ogeto@owasp.org)
-* [Mathew Macharia](mailto:mathew.macharia@owasp.org)
+* [Randy Voti](mailto:randy.voti@owasp.org)
+* [Job Makwani](mailto:job.makwani@owasp.org)
+  
