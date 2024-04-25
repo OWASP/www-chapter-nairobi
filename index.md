@@ -55,163 +55,48 @@ Chapter pages on this site have general information and leader contact info. Loc
 -->
 
 
-## Chapter Listing
-{% assign countries = site.data.chapters | map: "country" | uniq | sort %}
-{% assign chapter_regions = site.data.chapters | map: "region" | uniq | sort%}
-{% assign countries_by_region = "" | split: "," %}
-{% for region in chapter_regions %}
-  {% assign ch_regions = "" | split: "," %}
-  {% for chapter in site.data.chapters %}
-    {% if region == chapter.region %}
-      {% assign ch_regions = ch_regions | push: chapter %}      
-    {% endif %}
-  {% endfor %}
-  {% assign countries_by_region = countries_by_region | push: ch_regions %}
-{% endfor %}
+---
 
-{% comment %}
-{% assign old_region = "" %}
-{% for region in countries_by_region %}
-  {%- for ch in region -%}
-    <div>{{ch.name}}</div>
-  {% endfor %}
-{% endfor %}
-{% endcomment %}
-{% assign supported_regions = site.data.supported_regions | map: "region" %}
-{% assign country_header = false %} 
-<div class='chapters-list corp_member_div' id='chapters-list'>
-    {% for region in chapter_regions %}
-      {%- if supported_regions contains region -%}
-        {% assign rcount = 0 %}       
-        {% for chapter in site.data.chapters %}
-          {% if chapter.region == region and chapter.build != 'no pages' %}
-            {% assign rcount = rcount | plus: 1 %}
-          {% endif %}
-        {% endfor %}  
-        <button class='accordion' style="margin-bottom: 3px;font-weight: bold; font-size: larger;"> {{ region }} ({{rcount}})</button>
-        <div class='panel chapter-panel'>
-              {% for country in countries %}
-                {% for rchs in countries_by_region %}
-                  {% for chapter in rchs %}
-                    
-                      {% if chapter.region == region and chapter.build != 'no pages' and chapter.country == country%}
-                        {% if country_header == false %}
-                          {% assign country_header = true %}
-                          {% assign country_title = chapter.country %}
-                          {% if country_title == "" %}
-                          {% assign country_title = "Unknown" %}
-                          {% endif %}                          
-                          <ul>
-                          <h5><a name="{{country_title}}"></a>{{country_title}}</h5>                        
-                          <hr>
-                        {% endif %}
-                          <li class="chapterli">&bull;<a href='{{ chapter.url }}'>{{ chapter.title | remove_first: "OWASP " }}</a></li>
-                      {% endif %}                                                                                               
-                  {%endfor%}
-                {% endfor %}                                 
-                {% if country_header == true %}
-                  </ul>
-                {% endif %}                  
-                {% assign country_header = false %}                                              
-              {%endfor%}
-        </div>
-      {%endif%}
-    {% endfor %}
-</div>
+layout: col-sidebar
+title: Corporate Supporter
+permalink: /supporters/
+site_side: true
+tags: corp-supporter
 
+---
+Corporate Supporters can show their support for our mission and programs, reaching an audience of over 500,000 participants on social media, millions of monthly site visits, and optionally providing member benefits to thousands of OWASP financial members. 
 
-## Chapters in Unsupported Regions
-<ul>
-{% for chapter in site.data.chapters %}
-    {% assign in_region = false %}
-    {% for region in site.data.supported_regions %}
-        {% if chapter.region == region.region or chapter.region == "Needs Website Update"%}
-            {% assign in_region = true %}
-        {% endif %}
-    {% endfor %}
-    {%- if in_region == false and chapter.build != 'no pages' -%}
-    <li><a href="{{chapter.url}}">{{chapter.title}}</a> in {{ chapter.region }}</li>
-    {% endif %}
-{% endfor %}
-</ul>
+Quick Links:
 
-<script type='text/javascript'>
-    var all = "{{ site.data.chapters | jsonify | replace: '"', '\"' | replace: '\t', ' ' }}";
-    var chapters = JSON.parse(all);
-    var default_chapters = "";
-    chapters = chapters.sort(function (a, b) {
-      if(a.region > b.region) 
-        return 1;
-      else if(b.region > a.region)
-        return -1;
-      else
-        return 0; 
-    });
+- [Packages and prices](https://owasp.org/supporters/packages)
+- [Benefits](https://owasp.org/supporters/benefits)
+- [Thank you to all our Corporate Supporters and Event Exhibitors/Sponsors!](https://owasp.org/supporters/list)
+- [Become a Corporate Supporter](mailto:events@owasp.com)
+- [Make a charitable gift](https://owasp.org/donate/?reponame=owasp.github.io)
 
-    function getLeaderEmailsForGroup(inleaders, group_name){
-        var emails = 'mailto:';
-        for(x = 0; x < inleaders.length; x++)
-        {
-          if(inleaders[x].group == group_name)
-          {
-            emails += inleaders[x].email.replace('mailto://','').replace('mailto:','');
-            emails += ",";
-          }
-        }
-        emails = emails.substring(0, emails.length - 1);
-        return emails;
-    }
-    
-    $("#chapters-filter").keyup(function(e) {
-        var code = e.keyCode ? e.keyCode : e.which;
-        if (code == 13) {  // Enter keycode
-            if(default_chapters == "") {
-              default_chapters = $('#chapters-list').html();
-            }
-            var filter = $('#chapters-filter').val();
-            filter = filter.toLowerCase();
+## Why Become an OWASP Corporate Supporter
 
-            if ( filter.trim() == "") {
-              $("#chapters-list").html(default_chapters);
-              return; 
-            }
-            var fchapters = []; 
-            
-            for(i = 0; i < chapters.length; i++){
-              var region = chapters[i].region.toLowerCase();
-              var title = chapters[i].title.toLowerCase();
-              var country = "";
-              if(chapters[i].country) {
-                country = chapters[i].country.toLowerCase();
-              }
-              //var country = chapters[i].country.toLowerCase();//
-              if(chapters[i].build != 'no pages' && (filter == '' || region.indexOf(filter) > -1 || title.indexOf(filter) > -1 || country.indexOf(filter) > -1))
-              {
-                fchapters.push(chapters[i]);
-              }
-            }
-            var html = "<ul>";
-            
-            for(i = 0; i < fchapters.length; i++){
+Corporate Supporter funds collected directly support OWASP's mission, helping to fund scholarships, our Projects, Chapters, and more! Funds provided by Corporate Supporters assist Projects with hiring graphical designers, user experience experts, contract development, document writers, and other hourly support personnel, as well as providing project-related pamphlets, brochures, stickers, and similar project-identifying material. They contribute to our Chapters, allowing them to secure venue space for Chapter meetings, promotional material to help promote the OWASP mission, assist in travel expenses for incoming speakers/presenters, etc.
 
-                  region = fchapters[i].region;
-                  html += "<li><a href='" + fchapters[i].url + "'>";
-                  html += region + ":" + fchapters[i].title + "</a></li>";
-                }
-            
-            html += "</ul>";
-            $('#chapters-list').html(html);
-          }          
-      });    
-      
-    $(".accordion").click(function () {
-                  $(this).toggleClass("active");
-                  if($(this).next('.panel').css('display') != 'none'){
-                    $(this).next('.panel').css('display', 'none');
-                  }
-                  else {
-                    $(this).next('.panel').css('display', 'block');
-                  }
-                });
-}
-</script>ups](https://groups.google.com/a/owasp.com/){:target='_blank'}, and [Community Slack Channel](https://owasp.slack.com/){:target='_blank'}. We especially encourage diversity in all our initiatives. OWASP is a fantastic place to learn about application security, to network, and even to build your reputation as an expert. We also encourage you to be [become a member](/membership) or consider a [donation](/donate) to support our ongoing work.
+Many of our most well-known organizations have grown their business dramatically by being an OWASP Corporate Supporter and partnering with us. Our updated Corporate Supporter packages provide you the opportunity to get involved with the OWASP community. 
+
+![Attendees at a Global AppSec Conference](/assets/images/web/global-conference.png)
+
+The Open Worldwide Application Security Project (OWASP) is a nonprofit foundation that works to improve software security. Our programming includes:
+
+- Community-led open-source software Projects
+- Hundreds of local Chapters worldwide
+- Tens of thousands of participants, thousands of financial members
+- Industry-leading educational and training conferences
+
+<p class="callout-mono right">Corporate support accelerates our impact. Become a Corporate Supporter today.</p>
+
+We are an open community dedicated to enabling organizations to conceive, develop, acquire, operate, and maintain applications that individuals and organizations can trust. Our projects, tools, documents, groups, and chapters are free and open to anyone interested in improving application security. For over two decades, corporations, foundations, developers, and volunteers have supported the OWASP Foundation and its work.
+
+## Supporting the Foundation
+
+There are many ways to participate and support the mission of OWASP.
+
+- Employees can participate in our [Projects](/projects) and [Local Chapters](/chapters)
+- [Exhibit/Sponsor our Global AppSec Events and participating AppSec Days events](mailto:events@owasp.com)
+- Make a [charitable gift](/donate) to the Foundation to support our ongoing work
