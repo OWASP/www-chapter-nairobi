@@ -5,7 +5,12 @@ tab: true
 order: 1
 tags: example-tag
 ---
-
+<!--
+<div>
+<label for='chapters-filter'>Filter List:</label>
+<input type='text' id='chapters-filter'>
+</div>
+-->
 ## Chapter Listing
 {% assign countries = site.data.chapters | map: "country" | uniq | sort %}
 {% assign chapter_regions = site.data.chapters | map: "region" | uniq | sort%}
