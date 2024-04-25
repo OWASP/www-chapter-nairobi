@@ -5,7 +5,10 @@ title: OWASP Nairobi
 tags: example-tag
 meetup-group: owasp-nairobi-meetup-group
 region: Africa
+country: Kenya
 
+
+---
 <!-- rebuild 1 -->
 
 <style>
@@ -32,9 +35,8 @@ region: Africa
     width: 100%;
   }
 </style>
-<img src="/assets/images/web/chaper-wide.jpg" alt=" ">
 
-OWASP Local Chapters build community for application security professionals around the world. Our Local Chapter Meetings are **free and open** to anyone to attend so both members and non-members are always welcomed. Local meetings include:
+Welcome to OWASP Nairobi Chapter homepage. Our Nairobi Chapter Meetings are **free and open** to anyone to attend so both members and non-members are always welcomed. Local meetings include:
 
 - Training to improve your skills
 - Talks relevant to your work
