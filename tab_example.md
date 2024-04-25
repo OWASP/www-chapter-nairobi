@@ -5,7 +5,8 @@ permalink: /chapters/
 site_side: true
 tags: chapters
 ---
-<!--
+<!-- rebuild 1 -->
+
 <style>
   .chapterli {
    -webkit-box-sizing: border-box;
