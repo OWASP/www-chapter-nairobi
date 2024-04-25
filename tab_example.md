@@ -6,6 +6,30 @@ site_side: true
 tags: chapters
 ---
 <!--
+<style>
+  .chapterli {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   display: inline-block;
+   width   : 24%;
+   padding : 15px; /* this will be applied internally, due to 
+                      box-sizing property */
+   vertical-align: text-top;
+}
+
+.chapter-panel {
+  background-color: lightgray;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 1024px) {
+  .chapterli {
+    display: block;
+    padding: 0px;
+    width: 100%;
+  }
+</style>
 <div>
 <label for='chapters-filter'>Filter List:</label>
 <input type='text' id='chapters-filter'>
