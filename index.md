@@ -36,7 +36,7 @@ country: Kenya
   }
 </style>
 
-Welcome to OWASP Nairobi Chapter homepage. Our Nairobi Chapter Meetings are **free and open** to anyone to attend so both members and non-members are always welcomed. Local meetings include:
+Welcome to OWASP Nairobi Chapter homepage. OWASP Local Chapters build community for application security professionals around the world. Our Nairobi Chapter Meetings are **free and open** to anyone to attend so both members and non-members are always welcomed. Local meetings include:
 
 - Training to improve your skills
 - Talks relevant to your work
