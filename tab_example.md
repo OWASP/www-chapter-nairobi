@@ -1,9 +1,9 @@
 ---
 title: Chapter Listing
-layout:  null
+layout:  col-sidebar
 tab: true
 order: 1
-tags: Chapter Listing-tag
+tags: example-tag
 ---
 
 ## Chapter Listing
