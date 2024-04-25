@@ -32,7 +32,7 @@ region: Africa
     width: 100%;
   }
 </style>
-<img src="/assets/images/web/chaper-wide.jpg" alt="Bay Area Chapter Meeting">
+<img src="/assets/images/web/chaper-wide.jpg" alt=" ">
 
 OWASP Local Chapters build community for application security professionals around the world. Our Local Chapter Meetings are **free and open** to anyone to attend so both members and non-members are always welcomed. Local meetings include:
 
