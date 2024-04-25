@@ -54,15 +54,6 @@ Chapter pages on this site have general information and leader contact info. Loc
 </div>
 -->
 
-
----
-
-layout: col-sidebar
-title: Corporate Supporter
-permalink: /supporters/
-site_side: true
-tags: corp-supporter
-
 ---
 Corporate Supporters can show their support for our mission and programs, reaching an audience of over 500,000 participants on social media, millions of monthly site visits, and optionally providing member benefits to thousands of OWASP financial members. 
 
