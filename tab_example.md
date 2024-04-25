@@ -1,9 +1,9 @@
 ---
-title: Chapter Listing
-layout:  col-sidebar
-tab: true
-order: 1
-tags: example-tag
+title: OWASP Local Chapters
+layout: col-sidebar
+permalink: /chapters/
+site_side: true
+tags: chapters
 ---
 <!--
 <div>
