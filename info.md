@@ -1,4 +1,4 @@
-div class="col-sidebar">
+
   <ul class="tabs">
     <li class="active"><a href="#tab1">Nairobi Information</a></li>
     <li><a href="#tab2">Code of Conduct</a></li>
