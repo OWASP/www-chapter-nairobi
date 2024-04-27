@@ -25,7 +25,7 @@
   <div class="tab-content" id="tab3">
     <h3>Social Links</h3>
     <ul>
-      <li><a href="[FACEBOOK_URL]">Facebook</a></li>
+      <li><a href="https://www.facebook.com/groups/957905912649710">Facebook</a></li>
       <li><a href="[TWITTER_URL]">Twitter</a></li>
       <li><a href="https://www.meetup.com/owasp-nairobi-meetup-group/">Meetup</a></li>
     </ul>
