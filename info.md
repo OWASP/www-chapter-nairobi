@@ -30,5 +30,4 @@
       <li><a href="https://www.meetup.com/owasp-nairobi-meetup-group/">Meetup</a></li>
     </ul>
   </div>
-</div>
 
