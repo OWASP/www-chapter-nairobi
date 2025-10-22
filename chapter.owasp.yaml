@@ -1,0 +1,28 @@
+community:
+  - name: chapter-nairobi
+    platform: slack
+    url: https://owasp.slack.com/archives/C09HC84B1CG
+    description: Official OWASP Nairobi Chapter – sharing updates, training, and collaboration opportunities to grow AppSec awareness in Kenya.
+leaders:
+  - name: Randy Voti
+    email: randy.voti@owasp.org
+  - name: Job Makwani
+    email: job.makwani@owasp.org
+location:
+  country: Kenya
+  country_code: KE
+  region: Nairobi County
+  city: Nairobi
+  latitude: -1.2832533
+  longitude: 36.8172449
+meetup_group: owasp-nairobi-meetup-group
+name: OWASP Nairobi
+repositories:
+  - name: www-chapter-nairobi
+    url: https://github.com/OWASP/www-chapter-nairobi
+    description: OWASP Foundation Web Repository
+tags:
+  - example-tag
+  - custom-tag-1
+  - custom-tag-2
+website: https://owasp.org/www-chapter-nairobi
